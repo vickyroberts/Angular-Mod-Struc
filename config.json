@@ -1,0 +1,59 @@
+[{"moduleName": "UserModule",
+   "jsFiles":["app/usermanagement/useradd.controller.js", "app/usermanagement/userlist.controller.js"], 
+   "pckInclude":false,
+   "stateRoutes":[{
+   "name": "landing",
+    "url": "/landing",
+    "data": {"requiredLogin": true, "state": "landing"},
+    "abstract": true,     
+     "templateUrl": "app/landingpage/landing.view.html" 
+},
+{
+   "name": "landing.newuser",
+    "url": "/users",
+    "data": {"requiredLogin": true, "state": "landing.newuser"},
+    "abstract": false,     
+     "templateUrl": "app/usermanagement/useradd.view.html",
+     "controller": "AddUserController as auc" 
+     
+},
+{
+   "name": "landing.listuser",
+    "url": "/newuser",
+    "data": {"requiredLogin": true, "state": "landing.listuser"},
+    "abstract": false,     
+     "templateUrl": "app/usermanagement/userlist.view.html",
+     "controller": "UserlistController as ulc"  
+}]},
+{"moduleName": "DealModule",
+   "jsFiles":["app/dealmanagement/dealadd.controller.js", "app/dealmanagement/deallist.controller.js"],
+   "pckInclude":true,  
+   "stateRoutes":[{
+   "name": "landing",
+    "url": "/landing",
+    "data": {"requiredLogin": true, "state": "landing"},
+    "abstract": true,     
+     "templateUrl": "app/landingpage/landing.view.html" 
+},
+{
+   "name": "landing.newdeals",
+    "url": "/deals",
+    "data": {"requiredLogin": true, "state": "landing.newdeals"},
+    "abstract": false,     
+     "templateUrl": "app/dealmanagement/dealadd.view.html",
+     "controller": "AddUserController as auc" 
+},
+{
+   "name": "landing.listuser",
+    "url": "/dealsnew",
+    "data": {"requiredLogin": true, "state": "landing.listuser"},
+    "abstract": false,     
+     "templateUrl": "app/dealmanagement/deallist.view.html",
+     "controller": "UserlistController as ulc" 
+}]},
+{
+    "name":"login",
+    "moduleName":"LastIndex",
+    "stateRoutes":[]
+}
+]
